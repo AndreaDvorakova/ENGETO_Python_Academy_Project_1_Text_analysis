@@ -30,3 +30,4 @@ garpike and stingray are also present.'''
 ]
 
 ODDELOVAC = ('-' * 40)
+
