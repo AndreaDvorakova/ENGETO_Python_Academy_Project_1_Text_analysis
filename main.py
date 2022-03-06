@@ -1,6 +1,7 @@
 from Users import *
 from Constants import *
 from Functions import *
+import pprint
 
 if __name__ == '__main__':
 
@@ -19,6 +20,13 @@ if __name__ == '__main__':
             print('There are ', pocet_slova_lower, ' lowercase words.')
             print('There are ', pocet_slova_cisla, ' numeric strings.')
             print('The sum of all the numbers ', suma_celkem, '.')
+            print(ODDELOVAC)
+            print("{:<5}{:<20}{:<4}".format('LEN |', ' OCCURENCES ', ' | NR.'))
+            print(ODDELOVAC)
+            for k, v in slovnik.items():
+                pocet = '*' *  k
+                print(f'{i:3} | {pocet:19} | {k:4d}')
+                i = i + 1
         else:
             print('The choice ', cislo_in, 'is not in the offer. Terminating the program...')
     else:

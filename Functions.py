@@ -6,14 +6,15 @@ slova_upper = []
 slova_lower = []
 slova_cisla = []
 suma_celkem = 0
-
+slovnik = {}
+i = 1
 
 list_slov = TEXTS[0].split()
 for slovo in list_slov:
-    ciste_slovo = slovo.strip(',.')
+    ciste_slovo = slovo.strip(',.-')
     cista_slova.append(ciste_slovo)
 
-for slovo in list_slov:
+for slovo in cista_slova:
     if slovo.istitle():
         slova_title.append(slovo)
     elif slovo.isalpha() and slovo.isupper():
@@ -31,3 +32,8 @@ pocet_slova_title = len(slova_title)
 pocet_slova_upper = len(slova_upper)
 pocet_slova_lower = len(slova_lower)
 pocet_slova_cisla = len(slova_cisla)
+
+for slovo in cista_slova:
+    l = len(slovo)
+    slovnik[l] = slovnik.get(l, 0) + 1
+
