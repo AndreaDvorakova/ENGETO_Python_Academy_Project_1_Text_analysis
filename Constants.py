@@ -1,3 +1,4 @@
+#nabidka textu pro analyzu
 '''
 author =
 '''

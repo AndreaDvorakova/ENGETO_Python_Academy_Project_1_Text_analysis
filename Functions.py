@@ -1,5 +1,6 @@
 from Constants import *
 
+#definice promennych
 cista_slova = []
 slova_title = []
 slova_upper = []
@@ -11,6 +12,14 @@ cislo_in = ''
 volba = ''
 
 def statistika_textu (cislo_in):
+    """Tato funkce ocisti vybrany text od zbytecnych znaku.
+    V cistem textu spocita:
+    - pocet slov
+    - pocet slov zacinajicich velkym pismenem
+    - pocet slov psanych velkymi pismeny
+    - pocet slov psanych malymi pismeny
+    - pocet cisel
+    - sumu vsech cisel v textu."""
     list_slov = TEXTS[cislo_in].split()
     for slovo in list_slov:
         ciste_slovo = slovo.strip(',.-')
@@ -36,7 +45,7 @@ def statistika_textu (cislo_in):
     print('The sum of all the numbers ', soucet_celkem, '.')
 
 def statistika_slov_graficky ():
+    """Tato funkce vytvori podklad (slovnik) pro zobrazeni jednoducheho sloupcovy grafu, reprezentujici cetnost ruznych delek slov ve vybranem textu."""
     for slovo in cista_slova:
         l = len(slovo)
         slovnik[l] = slovnik.get(l, 0) + 1
-
