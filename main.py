@@ -28,10 +28,10 @@ if __name__ == '__main__':
             print(ODDELOVAC)
 
             #sloupcovy graf repreyentujici cetnost jednotlivych delek slov
-            for k, v in slovnik.items():
-                pocet = '*' *  k
-                print(f'{i:3} | {pocet:19} | {k:2d}')
-                i = i + 1
+            for k, v in sorted(slovnik.items()):
+                pocet = '*' *  v
+                print(f'{k:3} | {pocet:19} | {v:2d}')
+
         else:
             print('The choice', volba, 'is not in the offer. Terminating the program...')
     else:

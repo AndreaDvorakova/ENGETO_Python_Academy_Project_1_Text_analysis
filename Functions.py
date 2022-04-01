@@ -49,3 +49,4 @@ def statistika_slov_graficky ():
     for slovo in cista_slova:
         l = len(slovo)
         slovnik[l] = slovnik.get(l, 0) + 1
+    return sorted(slovnik)
